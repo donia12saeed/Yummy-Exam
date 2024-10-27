@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yummy</title>
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/media.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav d-flex flex-column justify-content-between" >
+   <div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" onclick="showSearchPage()">Search</a>
+    <a href="#" onclick="showCategoriesPage()">Categories</a>
+    <a href="#" onclick="showAreaPage()">Area</a>
+    <a href="#" onclick="showIngredientsPage()">Ingredients</a>
+    <a href="#" onclick="showContactPage()">Contact Us</a>
+   </div>
+   <div class="m-3 text-white">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-solid fa-globe"></i>
+    <p>Copyright Â© 2019 All Rights Reserved.</p>
+   </div>
+  </div>
+
+  <div class="opennav " onclick="openNav()">
+
+    <div> <span class="d-flex justify-content-center align-items-center">☰</span></div>
+
+  </div>
+
+
+  <div>
+    <div class="container" id="allMeals">
+      <div class="row" id="mealCard">
+
+
+      </div>
+    </div>
+    <!------------------------------------------------------------------------>
+    <div class="container mealDetails text-white d-none" id="mealDetails">
+
+    </div>
+    <!--------------------------------------------------------------------------->
+
+    <div class="container mealSearch d-none " id="mealSearch">
+      <form action="">
+        <div class="row">
+          <div class=" col-md-12 col-lg-6 ">
+            <input type="text" onkeyup="searchMealByName(this.value)" class="form-control border-2 "
+              placeholder=" Search By Name">
+          </div>
+          <div class="  col-md-12 col-lg-6">
+            <input type="text" onkeyup="searchMealByFirstLetter(this.value)" maxlength="1" class="form-control border-2"
+              placeholder="Search By First Letter">
+          </div>
+        </div>
+      </form>
+      <div class="row mt-5" id="searchResult">
+
+      </div>
+    </div>
+
+    <!------------------------------------------------------------------------>
+    <div class="container mealcategories d-none" id="mealCategories">
+      <div class="row" id="categoriesRow">
+
+      </div>
+    </div>
+
+    <!------------------------------------------------------------------------->
+    <div class="container mealarea d-none" id="maelArea">
+      <div class="row " id="areaRow">
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------->
+
+    <div class="container d-none" id="maelIngredients">
+      <div class="row" id="ingredienRow">
+
+      </div>
+    </div>
+
+    <!------------------------------------------------------------------------------>
+
+    <div class="container d-none" id="mealContact">
+
+      <form id="registrationForm">
+        <div class="row g-3 mt-5">
+          <div class="col-md-12 col-lg-6">
+            <input type="text" id="name" class="form-control border-2" placeholder="Enter Your Name" required>
+            <div class="error" id="nameError"></div>
+          </div>
+
+          <div class="col-md-12 col-lg-6">
+            <input type="email" id="email" class="form-control border-2" placeholder="Enter Your Email" required>
+            <div class="error" id="emailError"></div>
+          </div>
+
+          <div class="col-md-12 col-lg-6">
+            <input type="text" id="phone" class="form-control border-2" placeholder="Enter Your Phone" required>
+            <div class="error" id="phoneError"></div>
+          </div>
+
+          <div class="col-md-12 col-lg-6">
+            <input type="number" id="age" class="form-control border-2" placeholder="Enter Your Age" required>
+            <div class="error" id="ageError"></div>
+          </div>
+
+          <div class="col-md-12 col-lg-6">
+            <input type="password" id="password" class="form-control border-2" placeholder="Enter Your Password"
+              required>
+            <div class="error" id="passwordError"></div>
+          </div>
+
+          <div class="col-md-12 col-lg-6">
+            <input type="password" id="repassword" class="form-control border-2" placeholder="Repassword" required>
+            <div class="error" id="repasswordError"></div>
+          </div>
+
+          <div class="d-flex justify-content-center align-items-center mt-4">
+            <button type="submit" class="btn btn-outline-danger">Submit</button>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="loading-screen">
+    <div class="loader"></div>
+</div>
+
+<div id="content" style="display: none;">
+    
+</div>
+
+  <script src="./js/index.js"></script>
+  <script src="./js/jquery.js"></script>
+</body>
+
+</html>
